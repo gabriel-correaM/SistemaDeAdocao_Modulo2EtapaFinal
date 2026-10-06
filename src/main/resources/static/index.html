@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Início · Sistema de Adoção</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <img class="logo" src="img/logo.png" alt="Logo Adoção: um laço de amor">
+    <button class="btn btn-nav" id="btn-inicio" type="button">Início</button>
+    <span class="espaco"></span>
+    <button class="btn btn-nav" id="btn-deslogar" type="button">Deslogar</button>
+  </header>
+
+  <main>
+    <p class="saudacao" id="saudacao"></p>
+    <h1>Sistema de adoção</h1>
+    <p class="subtitulo">
+      Cadastre animais que precisam de um lar, encontre o companheiro ideal e
+      acompanhe suas adoções.
+    </p>
+
+    <section class="cards">
+      <article class="card">
+        <img src="img/cadastrar-pet.jpg" alt="Ilustração de cadastro de animal">
+        <div class="corpo">
+          <h2>Cadastrar animal</h2>
+          <p>Registre um novo animal disponível para adoção.</p>
+          <a class="btn btn-primario btn-link" href="cadastro-pet.html">Ir para a página</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/lista-animais.jpg" alt="Ilustração da lista de animais">
+        <div class="corpo">
+          <h2>Animais para adoção</h2>
+          <p>Veja a lista, adote ou exclua um animal.</p>
+          <a class="btn btn-primario btn-link" href="lista-animais.html">Ir para a página</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/perfil.jpg" alt="Ilustração de perfil de usuário">
+        <div class="corpo">
+          <h2>Meu perfil</h2>
+          <p>Consulte os seus dados cadastrados.</p>
+          <a class="btn btn-primario btn-link" href="perfil.html">Ir para a página</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

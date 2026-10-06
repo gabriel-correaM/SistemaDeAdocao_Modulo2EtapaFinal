@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animais para adoção · Sistema de Adoção</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/lista.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <img class="logo" src="img/logo.png" alt="Logo Adoção: um laço de amor">
+    <button class="btn btn-nav" id="btn-inicio" type="button">Início</button>
+    <span class="espaco"></span>
+    <button class="btn btn-nav" id="btn-deslogar" type="button">Deslogar</button>
+  </header>
+
+  <main>
+    <h1>Lista dos animais para adoção</h1>
+    <p class="subtitulo">Clique em um animal para selecioná-lo.</p>
+
+    <div class="tabela-caixa">
+      <table id="tabela">
+        <thead>
+          <tr>
+            <th>Nome do animal</th>
+            <th>Adotado?</th>
+            <th>ID do adotante</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-tabela"></tbody>
+      </table>
+
+      <div class="vazio oculto" id="vazio">
+        Nenhum animal cadastrado ainda.
+        <a href="cadastro-pet.html">Cadastrar um animal</a>
+      </div>
+    </div>
+
+    <p class="dica" id="dica"></p>
+
+    <div class="barra-acoes">
+      <button class="btn btn-dourado" id="btn-adotar" type="button" disabled>Adotar</button>
+      <button class="btn btn-perigo" id="btn-excluir" type="button" disabled>Excluir</button>
+    </div>
+  </main>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/lista.js"></script>
+</body>
+</html>

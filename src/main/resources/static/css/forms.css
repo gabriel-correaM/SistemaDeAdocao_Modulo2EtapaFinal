@@ -1,0 +1,105 @@
+.form-caixa {
+  background: var(--card);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 32px;
+  margin: 0 auto;
+}
+
+.form-caixa.largo {
+  max-width: 720px;
+}
+
+.form-caixa.estreito {
+  max-width: 420px;
+}
+
+.form-coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 28px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--azul);
+}
+
+.campo input {
+  font: inherit;
+  padding: 11px 12px;
+  border: 2px solid var(--borda);
+  border-radius: 10px;
+  background: #fff;
+  transition: border-color 0.15s;
+}
+
+.campo input:focus {
+  border-color: var(--azul);
+  outline: none;
+}
+
+.campo.invalido input {
+  border-color: var(--erro);
+}
+
+.campo .msg-erro {
+  color: var(--erro);
+  font-size: 0.82rem;
+  min-height: 1.1em;
+}
+
+.acao-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.acao-form .btn {
+  min-width: 200px;
+}
+
+.troca {
+  text-align: center;
+  margin-top: 18px;
+  color: var(--suave);
+  font-size: 0.92rem;
+}
+
+.troca button {
+  background: none;
+  border: none;
+  color: var(--azul);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.pagina-cadastro main {
+  padding-top: 32px;
+}
+
+@media (max-width: 640px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+
+  .form-caixa {
+    padding: 22px;
+  }
+}

@@ -1,0 +1,88 @@
+.tabela-caixa {
+  background: var(--card);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background: var(--azul);
+  color: #fff;
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+}
+
+.linha {
+  cursor: pointer;
+  border-bottom: 1px solid var(--borda);
+  transition: background 0.12s;
+}
+
+.linha td {
+  padding: 14px 18px;
+}
+
+.linha:hover {
+  background: var(--dourado-claro);
+}
+
+.linha.selecionada {
+  background: var(--dourado-claro);
+  box-shadow: inset 5px 0 0 var(--dourado);
+  font-weight: 700;
+}
+
+.selo {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.selo.sim {
+  background: #dff1e6;
+  color: var(--ok);
+}
+
+.selo.nao {
+  background: #ece8dc;
+  color: var(--suave);
+}
+
+.vazio {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--suave);
+}
+
+.vazio a {
+  color: var(--azul);
+  font-weight: 700;
+}
+
+.dica {
+  text-align: center;
+  color: var(--suave);
+  font-size: 0.88rem;
+  margin-top: 12px;
+  min-height: 1.3em;
+}
+
+.barra-acoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.barra-acoes .btn {
+  min-width: 150px;
+}

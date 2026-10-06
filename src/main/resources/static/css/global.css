@@ -1,0 +1,204 @@
+:root {
+  --azul: #1d4b73;
+  --azul-escuro: #143653;
+  --dourado: #c8963e;
+  --dourado-claro: #f3e3c0;
+  --fundo: #f6f3ec;
+  --card: #ffffff;
+  --texto: #22303c;
+  --suave: #6b7885;
+  --borda: #e0d9c9;
+  --erro: #b3342f;
+  --ok: #2f7d4f;
+  --raio: 14px;
+  --sombra: 0 6px 20px rgba(20, 54, 83, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 32px;
+  background: var(--azul);
+  border-bottom: 4px solid var(--dourado);
+}
+
+.cabecalho .logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  display: block;
+}
+
+.cabecalho .espaco {
+  flex: 1;
+}
+
+.btn {
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  transition: transform 0.12s, background 0.15s, opacity 0.15s;
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn:focus-visible,
+input:focus-visible,
+.linha:focus-visible {
+  outline: 3px solid var(--dourado);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-nav {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.btn-nav:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.btn-primario {
+  background: var(--azul);
+  color: #fff;
+}
+
+.btn-primario:hover:not(:disabled) {
+  background: var(--azul-escuro);
+}
+
+.btn-dourado {
+  background: var(--dourado);
+  color: #2b1d05;
+}
+
+.btn-dourado:hover:not(:disabled) {
+  filter: brightness(1.06);
+}
+
+.btn-perigo {
+  background: var(--erro);
+  color: #fff;
+}
+
+.btn-perigo:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.btn-neutro {
+  background: #fff;
+  color: var(--azul);
+  border-color: var(--borda);
+}
+
+.btn-neutro:hover {
+  background: var(--fundo);
+}
+
+.btn-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 56px;
+}
+
+h1 {
+  color: var(--azul);
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.subtitulo {
+  text-align: center;
+  color: var(--suave);
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+.oculto {
+  display: none !important;
+}
+
+dialog.confirmacao {
+  border: none;
+  border-radius: var(--raio);
+  padding: 28px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+dialog.confirmacao::backdrop {
+  background: rgba(20, 54, 83, 0.55);
+}
+
+dialog.confirmacao h2 {
+  margin: 0 0 8px;
+  color: var(--azul);
+  font-size: 1.3rem;
+}
+
+dialog.confirmacao p {
+  margin: 0 0 22px;
+}
+
+dialog.confirmacao .acoes {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 600px) {
+  .cabecalho {
+    padding: 10px 14px;
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 9px 14px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}

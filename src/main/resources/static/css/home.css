@@ -1,0 +1,55 @@
+.saudacao {
+  text-align: center;
+  color: var(--dourado);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  background: var(--dourado-claro);
+}
+
+.card .corpo {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--azul);
+}
+
+.card p {
+  margin: 0 0 8px;
+  color: var(--suave);
+  font-size: 0.93rem;
+  flex: 1;
+}
